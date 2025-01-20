@@ -19,14 +19,18 @@
 
 @media screen and (max-width: 500px) {
     #buy{
-        position: static;
+        display: none;
     }
     .taskbar{
+        background: transparent;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
     }
     .btn{
-        margin: 0px;
+        margin:0;
+        padding: 0;        
     }
     .details-container{
         text-align: center;
@@ -69,7 +73,7 @@ body{
 
 .taskbar{
     background-color: var(--secondary-transparent);
-    width: 100%;
+    width: 100vw;
     padding: 10px;
     position: fixed;
 }
@@ -96,7 +100,7 @@ body{
 }
 
 #buy{
-    position: absolute;
+    position: fixed;
     right: 30px;
 }
 
