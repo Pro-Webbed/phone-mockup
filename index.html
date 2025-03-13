@@ -1,61 +1,503 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pineapple 15 Max Pro</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <img id="bg-img" src="media/49287229_9205971.jpg">
-    <div class="taskbar">
-        <div id="taskbar-btn">            
-            <button onclick="smoothScrolling('hero')" class="btn" id="home">Home</button>
-            <button onclick="smoothScrolling('details')" class="btn" id="about">About</button>
-            <button onclick="mockup()" class="btn" id="buy">Buy Now!</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pineapple 15 Max Pro | Next Generation Technology</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <meta
+            name="description"
+            content="Discover the revolutionary Pineapple 15 Max Pro with titanium design, A17 Pro chip, and pro-grade camera system."
+        />
+    </head>
+    <body>
+        <!-- Floating Navigation Indicator -->
+        <div class="scroll-indicator">
+            <div class="indicator-dot active" data-section="hero"></div>
+            <div class="indicator-dot" data-section="features"></div>
+            <div class="indicator-dot" data-section="camera"></div>
+            <div class="indicator-dot" data-section="specs"></div>
+            <div class="indicator-dot" data-section="buy"></div>
         </div>
-    </div>
-    <div id="hero" class="hero">
-        <div class="abt-product">
-            <div>
-                <h2>Pineapple 15 Max Pro</h2>
-                <p id="about-brief">
-                    The Pineapple 15 Max Pro features a titanium frame, A17 Pro chip, 5x zoom camera, vibrant Super Retina XDR display, iOS 17, and USB-C connectivity—delivering power and innovation in a sleek design.
-                </p> 
-                <button onclick="mockup()" class="btn-main" id="buy-main">Buy Now!</button>
-            </div>
-                
-        </div>
-        <div class="product">
-            <img id="mockup-img" src="media/mockup.png">
-        </div>
-    </div>
-    <div id="details" class="details">
-        <div class="details-container">
-            <h3>Take stunning photos with the 48mp camera</h3>
-            <span class="unseen-mobile">
-                The iPhone 15 Pro Max combines cutting-edge innovation with premium design, featuring a lightweight titanium frame and the powerful A17 Pro chip for unmatched performance. Its upgraded camera system boasts a 5x telephoto zoom, while the Super Retina XDR display delivers vibrant visuals. Running on iOS 17, it offers enhanced personalization and privacy. With USB-C connectivity for faster data transfer, the iPhone 15 Pro Max sets a new standard for flagship smartphones.
-            </span>
-        </div>
-        <div class="details-image">
-            <img class="details-img" src="media/beautiful-fresh-pink-blossom-with-dew.jpg">
-        </div>
-    </div>
-    <div class="details">
-        <div class="details-image">
-            <img class="details-img" src="media/beautiful-fresh-pink-blossom-with-dew.jpg">
-        </div>
-        <div class="details-container">
-            <h3>Equipped with the latest pineapple true tone camera</h3>
-            <span class="unseen-mobile">
-                The iPhone 15 Pro Max combines cutting-edge innovation with premium design, featuring a lightweight titanium frame and the powerful A17 Pro chip for unmatched performance. Its upgraded camera system boasts a 5x telephoto zoom, while the Super Retina XDR display delivers vibrant visuals. Running on iOS 17, it offers enhanced personalization and privacy. With USB-C connectivity for faster data transfer, the iPhone 15 Pro Max sets a new standard for flagship smartphones.
-            </span>
-        </div>
-    </div>
-    <div class="footer".>
 
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+        <!-- Modern Fixed Header -->
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">
+                    <a href="#hero">
+                        <i class="fab fa-apple"></i>
+                        <span>Pineapple</span>
+                    </a>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#hero" class="nav-link">Home</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#camera" class="nav-link">Camera</a>
+                    <a href="#specs" class="nav-link">Specs</a>
+                    <a href="#buy" class="nav-link btn-primary">Buy Now</a>
+                </nav>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section with Parallax -->
+        <section id="hero" class="hero-section">
+            <div class="parallax-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate-in">
+                        Pineapple 15 <span class="text-gradient">Max Pro</span>
+                    </h1>
+                    <p class="tagline animate-in">
+                        Titanium. So strong. So light. So Pro.
+                    </p>
+                    <p class="hero-description animate-in">
+                        Experience the ultimate smartphone innovation with our
+                        titanium-crafted masterpiece, featuring the
+                        revolutionary A17 Pro chip, a groundbreaking camera
+                        system, and extraordinary battery life.
+                    </p>
+                    <div class="hero-cta animate-in">
+                        <a href="#buy" class="btn-primary">Buy Now</a>
+                        <a href="#learn-more" class="btn-secondary"
+                            >Learn More</a
+                        >
+                    </div>
+                </div>
+                <div class="hero-image animate-in">
+                    <div class="phone-showcase">
+                        <img
+                            src="media/mockup.png"
+                            alt="Pineapple 15 Max Pro"
+                            class="floating"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Features Section with Cards -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">
+                    Engineered for <span class="text-gradient">Excellence</span>
+                </h2>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>A17 Pro Chip</h3>
+                        <p>
+                            The world's first 3nm chip with 6-core CPU and
+                            5-core GPU delivers exceptional performance.
+                        </p>
+                        <div class="performance-meter">
+                            <div class="meter-fill" style="width: 95%"></div>
+                            <span>95% faster than competitors</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Titanium Design</h3>
+                        <p>
+                            Aerospace-grade titanium makes it our lightest Pro
+                            model ever—extraordinarily durable and brilliant.
+                        </p>
+                        <div class="material-showcase">
+                            <span class="material-chip">Titanium</span>
+                            <span class="material-chip">45% Lighter</span>
+                            <span class="material-chip">Military Grade</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <h3>All-Day Battery</h3>
+                        <p>
+                            Enjoy up to 29 hours of video playback with our most
+                            advanced battery technology.
+                        </p>
+                        <div class="battery-indicator">
+                            <div class="battery-bar"></div>
+                            <span>29hrs</span>
+                        </div>
+                    </div>
+
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>USB-C</h3>
+                        <p>
+                            Connect and charge with the universal standard for
+                            fast data transfer up to 10Gbps.
+                        </p>
+                        <div class="transfer-speed">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>10Gbps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Camera Section with Interactive Elements -->
+        <section id="camera" class="camera-section">
+            <div class="camera-bg"></div>
+            <div class="container">
+                <div class="camera-content reveal">
+                    <h2 class="section-title">
+                        Pro Camera <span class="text-gradient">System</span>
+                    </h2>
+                    <h3 class="camera-subtitle">
+                        Capture the moment in perfect detail
+                    </h3>
+
+                    <div class="camera-controls">
+                        <button class="camera-tab active" data-mode="standard">
+                            Standard
+                        </button>
+                        <button class="camera-tab" data-mode="lowlight">
+                            Low Light
+                        </button>
+                        <button class="camera-tab" data-mode="zoom">
+                            5x Zoom
+                        </button>
+                    </div>
+
+                    <p class="camera-description">
+                        The 48MP main camera with its larger sensor captures
+                        stunning detail, while the 5x telephoto lens brings you
+                        closer to the action than ever before. The advanced
+                        photonic engine processes images with breathtaking
+                        clarity.
+                    </p>
+
+                    <ul class="camera-features">
+                        <li><i class="fas fa-check"></i> 48MP Main Camera</li>
+                        <li><i class="fas fa-check"></i> 12MP Ultra Wide</li>
+                        <li><i class="fas fa-check"></i> 12MP 5x Telephoto</li>
+                        <li><i class="fas fa-check"></i> Photonic Engine</li>
+                        <li>
+                            <i class="fas fa-check"></i> Night Mode across all
+                            cameras
+                        </li>
+                    </ul>
+                </div>
+                <div class="camera-image reveal">
+                    <div class="image-comparison">
+                        <div class="camera-showcase active" id="standard-mode">
+                            <img
+                                src="media/beautiful-fresh-pink-blossom-with-dew.jpg"
+                                alt="Standard camera sample"
+                                class="rounded-image"
+                            />
+                        </div>
+                        <div class="camera-showcase" id="lowlight-mode">
+                            <img
+                                src="media/beautiful-fresh-pink-blossom-with-dew.jpg"
+                                alt="Low light camera sample"
+                                class="rounded-image filter-lowlight"
+                            />
+                        </div>
+                        <div class="camera-showcase" id="zoom-mode">
+                            <img
+                                src="media/beautiful-fresh-pink-blossom-with-dew.jpg"
+                                alt="Zoom camera sample"
+                                class="rounded-image filter-zoom"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications Section with Interactive Table -->
+        <section id="specs" class="specs-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">
+                    Technical <span class="text-gradient">Specifications</span>
+                </h2>
+
+                <div class="specs-tabs">
+                    <button class="spec-tab active" data-spec="overview">
+                        Overview
+                    </button>
+                    <button class="spec-tab" data-spec="display">
+                        Display
+                    </button>
+                    <button class="spec-tab" data-spec="performance">
+                        Performance
+                    </button>
+                    <button class="spec-tab" data-spec="camera">Camera</button>
+                </div>
+
+                <div class="specs-content">
+                    <div class="spec-panel active" id="overview-panel">
+                        <div class="specs-grid">
+                            <div class="spec reveal">
+                                <h4>Display</h4>
+                                <p>
+                                    6.7-inch Super Retina XDR<br />2796 x 1290
+                                    resolution at 460 ppi<br />ProMotion
+                                    technology with 120Hz
+                                </p>
+                            </div>
+                            <div class="spec reveal">
+                                <h4>Processor</h4>
+                                <p>
+                                    A17 Pro chip<br />6-core CPU, 5-core GPU<br />16-core
+                                    Neural Engine
+                                </p>
+                            </div>
+                            <div class="spec reveal">
+                                <h4>Storage</h4>
+                                <p>
+                                    256GB, 512GB, 1TB<br />or 2TB configurations
+                                </p>
+                            </div>
+                            <div class="spec reveal">
+                                <h4>Camera</h4>
+                                <p>
+                                    48MP Main, ƒ/1.78 aperture<br />12MP Ultra
+                                    Wide, ƒ/2.2 aperture<br />12MP 5x Telephoto,
+                                    ƒ/2.8 aperture
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-panel" id="display-panel">
+                        <div class="spec-detail">
+                            <div class="spec-image reveal">
+                                <img
+                                    src="media/mockup.png"
+                                    alt="Display"
+                                    class="spec-showcase"
+                                />
+                            </div>
+                            <div class="spec-info reveal">
+                                <h3>Super Retina XDR Display</h3>
+                                <ul class="spec-list">
+                                    <li>
+                                        6.7-inch (diagonal) all-screen OLED
+                                        display
+                                    </li>
+                                    <li>
+                                        2796 x 1290-pixel resolution at 460 ppi
+                                    </li>
+                                    <li>
+                                        ProMotion technology with adaptive
+                                        refresh rates up to 120Hz
+                                    </li>
+                                    <li>
+                                        HDR display with True Tone and P3 wide
+                                        color
+                                    </li>
+                                    <li>
+                                        2,000,000:1 contrast ratio (typical)
+                                    </li>
+                                    <li>1600 nits peak brightness (HDR)</li>
+                                    <li>
+                                        Fingerprint-resistant oleophobic coating
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional spec panels would go here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy Section with Interactive Elements -->
+        <section id="buy" class="buy-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">
+                    <span class="text-gradient"
+                        >Customise Your Pineapple 15 Max Pro</span
+                    >
+                </h2>
+
+                <div class="color-selector reveal">
+                    <div class="color-options">
+                        <button
+                            class="color-option active"
+                            data-color="titanium"
+                            style="background-color: #8e8e93"
+                        ></button>
+                        <button
+                            class="color-option"
+                            data-color="black"
+                            style="background-color: #1a1a1a"
+                        ></button>
+                        <button
+                            class="color-option"
+                            data-color="white"
+                            style="background-color: #f5f5f7"
+                        ></button>
+                        <button
+                            class="color-option"
+                            data-color="blue"
+                            style="background-color: #7d93a8"
+                        ></button>
+                    </div>
+                    <div class="phone-preview">
+                        <img
+                            src="media/mockup.png"
+                            alt="Pineapple 15 Max Pro"
+                            id="phone-color-preview"
+                        />
+                    </div>
+                </div>
+
+                <div class="pricing-cards reveal">
+                    <div class="pricing-card">
+                        <h3>Pineapple 15 Max Pro</h3>
+                        <p class="storage">256GB</p>
+                        <p class="price">$1,199</p>
+                        <div class="pricing-features-container">
+                            <ul class="pricing-features">
+                                <li>6.7-inch Super Retina XDR</li>
+                                <li>A17 Pro chip</li>
+                                <li>Titanium design</li>
+                                <li>Pro camera system</li>
+                            </ul>
+                        </div>
+                        <button onclick="mockup()" class="btn-primary">
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="popular-tag">Most Popular</div>
+                        <h3>Pineapple 15 Max Pro</h3>
+                        <p class="storage">512GB</p>
+                        <p class="price">$1,399</p>
+                        <div class="pricing-features-container">
+                            <ul class="pricing-features">
+                                <li>6.7-inch Super Retina XDR</li>
+                                <li>A17 Pro chip</li>
+                                <li>Titanium design</li>
+                                <li>Pro camera system</li>
+                            </ul>
+                        </div>
+                        <button
+                            onclick="mockup()"
+                            class="btn-primary pulse-animation"
+                        >
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>Pineapple 15 Max Pro</h3>
+                        <p class="storage">1TB</p>
+                        <p class="price">$1,599</p>
+                        <div class="pricing-features-container">
+                            <ul class="pricing-features">
+                                <li>6.7-inch Super Retina XDR</li>
+                                <li>A17 Pro chip</li>
+                                <li>Titanium design</li>
+                                <li>Pro camera system</li>
+                            </ul>
+                        </div>
+                        <button onclick="mockup()" class="btn-primary">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-grid">
+                        <div class="footer-column">
+                            <h4>Shop and Learn</h4>
+                            <ul>
+                                <li><a href="#">Store</a></li>
+                                <li><a href="#">Pineapple 15</a></li>
+                                <li><a href="#">PinepadOS</a></li>
+                                <li><a href="#">Accessories</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#">Pineapple Music</a></li>
+                                <li><a href="#">Pineapple TV+</a></li>
+                                <li><a href="#">Pineapple Cloud</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>About Pineapple</h4>
+                            <ul>
+                                <li><a href="#">Newsroom</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Ethics</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Stay Connected</h4>
+                            <div class="social-links">
+                                <a href="#"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                            <p class="newsletter">
+                                Subscribe to our newsletter
+                            </p>
+                            <div class="newsletter-form">
+                                <input
+                                    type="email"
+                                    placeholder="Email address"
+                                    aria-label="Email address"
+                                />
+                                <button type="submit">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Pineapple Inc. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Sales Policy</a>
+                        <a href="#">Legal</a>
+                        <a href="#">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
